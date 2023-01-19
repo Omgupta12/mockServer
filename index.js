@@ -12,6 +12,10 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json()) 
 app.use(cors())
 
+app.get('/', (req, res) => {
+    res.send('Server working');
+});
+
 app.use("/user",userRoute)
 app.use("/bug",bugRoute)
 
